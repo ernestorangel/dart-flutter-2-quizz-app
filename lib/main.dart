@@ -1,21 +1,12 @@
 import 'package:flutter/material.dart';
 
-const startAlignment = Alignment.topLeft;
-const endAligment = Alignment.bottomRight;
-const startColor = Color.fromARGB(255, 62, 0, 169);
-const endColor = Color.fromARGB(255, 39, 0, 65);
-
 void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
         body: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [startColor, endColor],
-              begin: startAlignment,
-              end: endAligment,
-            ),
+            color: Colors.deepPurple,
           ),
           child: Center(
             child: Column(
@@ -26,13 +17,15 @@ void main() {
                   width: 200,
                 ),
                 const SizedBox(height: 20),
-                TextButton(
+                const Text('Learn Flutter the fun way!'),
+                const SizedBox(height: 20),
+                OutlinedButton(
                   onPressed: null,
-                  style: TextButton.styleFrom(
+                  style: OutlinedButton.styleFrom(
                     foregroundColor: Colors.white,
                     textStyle: TextStyle(fontSize: 28),
                   ),
-                  child: const Text('Roll Dice!'),
+                  child: const Text('Start Quiz'),
                 ),
               ],
             ),
